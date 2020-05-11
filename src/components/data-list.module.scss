@@ -1,0 +1,112 @@
+.data-list {
+    &:focus {
+    outline: none;
+  }
+
+  &__header,
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    width: 295px;
+  }
+
+  &__header {
+    color: $secondary;
+    padding-right: 5px;
+    margin-bottom: 10px;
+
+    span {
+      cursor: pointer;
+    }
+
+    & > span:first-child {
+      flex-basis: 125px;
+      padding-left: 4px;
+    }
+
+    & > span {
+      flex-basis: 75px;
+    }
+
+    & > span:last-child {
+      text-align: right;
+      padding-right: 4px;
+    }
+  }
+
+  &__row {
+     & > span:first-child {
+      flex-basis: 30px;
+      padding-left: 4px;
+    }
+
+    & > span:nth-child(2) {
+      flex-basis: 90px;
+    }
+
+    & > span {
+      flex-basis: 75px;
+    }
+
+    & > span:last-child {
+      text-align: right;
+      padding-right: 4px;
+    }
+  }
+}
+
+.sort-icon {
+  display: inline-block;
+  position: relative;
+  width: 5px;
+  height: 14px;
+  vertical-align: middle;
+  text-align: left;
+  margin-left: 2px;
+
+  & > i {
+    position: absolute;
+  }
+
+  &--active-asc {
+    & > i:first-child {
+      color: $accent-color;
+    }
+  }
+
+  &--active-desc {
+    & > i:last-child {
+      color: $accent-color;
+    }
+  }
+}
+
+.scroll-bar {
+  position: absolute;
+  width: 3px !important;
+  right: 2px;
+  bottom: 2px;
+  top: 2px;
+  background-color: $scroll-secondary;
+  transform: translateY(0px);
+
+  & > div {
+    background-color: $scroll-primary;
+  }
+}
+
+.favorites {
+  cursor: pointer;
+  color: $scroll-primary;
+
+  &--active {
+    color: $accent-color;
+  }
+}
+
+.menu {
+  display: flex;
+  margin-bottom: 10px;
+  padding: 0 6px;
+}

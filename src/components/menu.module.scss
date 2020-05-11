@@ -1,0 +1,60 @@
+.menu {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: space-between;
+  margin: 0;
+  padding: 10px 0;
+  border-top: 1px solid $scroll-secondary;
+
+  &__item {
+    font-size: 14px;
+    padding: 4px 6px;
+
+    a {
+      text-decoration: none;
+      color: $secondary;
+    }
+
+    &--active {
+      background-color: $background;
+      border-radius: 2px;
+
+      a {
+        color: $primary;
+      }
+    }
+  }
+}
+
+.sub-menu {
+  position: relative;
+
+  &__menu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    list-style: none;
+    justify-content: space-between;
+    left: 0;
+    right: 0;
+    background-color: white;
+    z-index: 10;
+  }
+
+  &__button {
+    background: none;
+    border: none;
+    color: $secondary;
+    font-size: 14px;
+    padding: 4px 6px;
+    cursor: pointer;
+
+    &--active {
+      color: $primary;
+      background-color: $background;
+      border-radius: 2px;
+    }
+  }
+}

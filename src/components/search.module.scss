@@ -1,0 +1,27 @@
+.search {
+  display: flex;
+  border-bottom: 1px solid $scroll-secondary;
+  padding-bottom: 4px;
+  font-size: 14px;
+  flex-direction: row-reverse;
+  align-items: center;
+  flex-basis: auto;
+
+  i {
+    color: $scroll-primary;
+  }
+
+  input {
+    border: none;
+    margin-left: 8px;
+    width: 100%;
+
+    &:focus {
+      outline: none;
+
+      & + i {
+        color: $accent-color;
+      }
+    }
+  }
+}
